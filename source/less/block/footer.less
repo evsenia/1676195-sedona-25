@@ -1,0 +1,116 @@
+.footer {
+  width: 100%;
+  display: flex;
+  height: 233px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer--indent {
+  padding-top: 90px;
+}
+
+.footer__tag {
+  font-family: @main-font;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer__tag--padding {
+  padding-left: 0;
+  padding-top: 43px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__button {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+  fill: #ffffff;
+}
+
+.footer__button-VK {
+  background-image: url("../../img/social.svg");
+}
+
+.footer__button-Tl {
+  background-image: url("../../img/social-1.svg");
+}
+
+.footer__button-yt {
+  background-image: url("../../img/social-2.svg");
+}
+
+.footer__developer {
+  display: flex;
+  flex-direction: row;
+  font-family: @main-font;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 26px;
+  align-items: center;
+}
+
+.footer__developer--padding {
+  padding-right: 0;
+}
+
+.footer__academylogo {
+  line-height: 0;
+}
+
+.footer__academylogo:focus,
+.footer__academylogo:hover {
+  fill: #81b3d2;
+}
+
+.footer__academylogo:active {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.footer__text {
+  margin-right: 27px;
+}
+
+/* медиазапросы*/
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__tag--padding {
+    padding-left: 88px;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__developer--padding {
+    padding-right: 107px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__developer--padding {
+    padding-right: 60px;
+  }
+}

@@ -2,25 +2,44 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="theme-color" content="#ffffff"><!-- 32×32 -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Sedona - главная страница</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="manifest" href="/img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/img/ms-icon-144x144.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/Arial-BoldMT.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Arial-BoldMT.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ArialMT.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ArialMT.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsans.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style" crossorigin="anonymous">
 </head>
 <body>
-<div class="wrapper">
+  <div class="wrapper">
 <header class="header">
-  <a class="header__logo">
+  <a class="header__logo" href="index.html">
     <picture>
       <source media="(min-width: 1200px)" srcset="img/header_logo.png">
       <source media="(min-width: 768px)" srcset="img/header_logo.png">
-      <img class="header__logo-image" src="img/header_logo.png" alt="лого Седона">
+      <img class="header__logo-image" src="img/header_logo.png" width="185" height="96" alt="лого Седона">
     </picture>
   </a>
-  <a class="nav__button" href="index.html"></a>
-  <nav class="header_nav">
+  <button class="nav-button"></button>
+  <nav class="nav">
     <ul class="nav__list  nav__list--hidden">
       <li class="nav__item ">
-        <a class="nav__link" href="../index.html">Главная</a>
+        <a class="nav__link" href="index.html">Главная</a>
       </li>
       <li class="nav__item">
         <a class="nav__link" href="catalog.html">Фото и видео</a>
@@ -40,99 +59,103 @@
       <picture>
         <source media="(min-width: 1200px)" srcset="img/sedona.svg">
         <source media="(min-width: 768px)" srcset="img/sedona.svg">
-        <img class="sedona__slogan sedona__slogan--indent" src="img/sedona.svg" alt="лого Седона">
+        <img class="sedona__slogan sedona__slogan--indent" src="img/sedona.svg" width="229" height="39" alt="лого Седона">
       </picture>
     </section>
-  <h1 class="visually-hidden">Сайт Sedona</h1>
-  <div class="main__description">
+    <div class="main__description">
     <h2 class="main__title main__title--indent">Оставьте свой отзыв</h2>
-    <p class="main__text">помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</p>
+    <span class="main__text">помогите нашим отелям стать лучше! Оставьте отзыв о них, а&nbsp;также о посещенных вами достопримечательностях</span>
   </div>
   <div class="feedback feedback--indent">
-    <div class="feedback-block feedback-block--name">
-      <h2 class="feedback-block__title">
+    <div class="feedback__block feedback__block--name">
+      <h2 class="feedback__title">
         представьтесь:
       </h2>
-      <ul class="feedback-list">
-        <li class="feedback-list__items">
-          <label class="feedback-list__itemes-name">Имя*:</label>
-          <input type="text" class="feedback-list__itemes-text" placeholder="Петр" required="">
+      <ul class="list feedback__list">
+        <li class="list__items">
+          <label  class="list__name" for="name" >Имя*:
+          <input type="text" id="name" class="list__text" placeholder="Петр" required="">
+          </label>
         </li>
-        <li class="feedback-list__items">
-          <label class="feedback-list__itemes-name">Фамилия*:</label>
-          <input type="text" class="feedback-list__itemes-text" placeholder="Пустота" required="">
+        <li class="list__items">
+          <label class="list__name" for="surname">Фамилия*:
+          <input type="text" id="surname" class="list__text" placeholder="Пустота" required="">
+          </label>
         </li>
-        <li class="feedback-list__items">
-          <label class="feedback-list__itemes-name">Отчество*:</label>
-          <input type="text" class="feedback-list__itemes-text" placeholder="Викторович" required="">
+        <li class="list__items">
+          <label class="list__name" for="middlename">Отчество*:
+          <input type="text"  id="middlename" class="list__text" placeholder="Викторович" required="">
+          </label>
         </li>
       </ul>
     </div>
-    <div class="feedback-block feedback-block--contact">
-      <h2 class="feedback-block__title ">
+    <div class="feedback__block feedback__block--contact">
+      <h2 class="feedback__title ">
         контактная информация:
       </h2>
-      <ul class="feedback-list">
-        <li class="feedback-list__items">
-          <label class="feedback-list__itemes-name">Контактный телефон*:</label>
-          <input type="text" class="feedback-list__itemes-text feedback-list__itemes-phone" placeholder="Введите телефон" required="">
+      <ul class="list feedback__list">
+        <li class="list__items">
+          <label class="list__name" for="number">Контактный телефон*:
+          <input type="text" id="number" class="list__text list__phone" placeholder="Введите телефон" required="">
+          </label>
         </li>
-        <li class="feedback-list__items">
-          <label class="feedback-list__itemes-name">Электронная почта*:</label>
-          <input type="text" class="feedback-list__itemes-text feedback-list__itemes-mail" placeholder="Введите e-mail" required="">
+        <li class="list__items">
+          <label class="list__name"  for="mail">Электронная почта*:
+          <input type="text"  id="mail" class="list__text list__mail" placeholder="Введите e-mail" required="">
+          </label>
         </li>
       </ul>
     </div>
-    <div class="feedback-block feedback-block--impression">
-      <h2 class="feedback-block__title feedback-block__title--strike feedback-block__title--ident">
+    <div class="feedback__block feedback__block--impression">
+      <h2 class="feedback__title feedback__title--strike feedback__title--ident">
         ваше общее впечатление:
       </h2>
-      <ul class="feedback-list feedback-list--row">
-        <li class="feedback-list__items feedback-list__itemes--impression">
-          <input type="radio" checked="true" name="radio" class="visually-hidden radio-input" id="radio1">
-          <label class="feedback-list__itemes-heading radio" for="radio1">Скорее положительные</label>
+      <ul class="list feedback__list feedback__list--row">
+        <li class="list__items list__impression">
+          <input type="radio" checked="checked" name="radio" class="visually-hidden radio-input" id="radio">
+          <label class="list__heading radio" for="radio">Скорее положительные</label>
         </li>
-        <li class="feedback-list__items feedback-list__itemes--impression">
+        <li class="list__items list__impression">
           <input type="radio" name="radio" class="visually-hidden radio-input" id="radio2">
-          <label class="feedback-list__itemes-heading radio" for="radio2">Скорее отрицательные</label>
+          <label class="list__heading radio" for="radio2">Скорее отрицательные</label>
         </li>
-        <li class="feedback-list__items feedback-list__itemes--impression">
+        <li class="list__items list__impression">
           <input type="radio"  name="radio" class="visually-hidden radio-input" id="radio3">
-          <label class="feedback-list__itemes-heading radio" for="radio3">Затрудняюсь ответить</label>
+          <label class="list__heading radio" for="radio3">Затрудняюсь ответить</label>
         </li>
       </ul>
     </div>
-    <div class="feedback-block  feedback-block--attraction">
-      <h2 class="feedback-block__title  feedback-block__title--strike feedback-block__title--ident">
+    <div class="feedback__block  feedback__block--attraction">
+      <h2 class="feedback__title  feedback__title--strike feedback__title--ident">
         Посещенные<br> достопримечательности
       </h2>
-      <ul class="feedback-list feedback-list--row">
-        <li class="feedback-list__items feedback-list__itemes--attraction">
-          <input type="checkbox" checked="true" name="" class="visually-hidden radio-input" id="checkbox1">
-          <label class="feedback-list__itemes-heading checkbox" for="checkbox1">Мост Дьявола</label>
+      <ul class="list feedback__list feedback__list--row">
+        <li class="list__items list__attraction">
+          <input type="checkbox" checked="checked" name="checkbox" class="visually-hidden radio-input" id="checkbox1">
+          <label class="list__heading checkbox" for="checkbox1">Мост Дьявола</label>
         </li>
-        <li class="feedback-list__items feedback-list__itemes--attraction">
-          <input type="checkbox" checked="true" name="checkbox" class="visually-hidden radio-input" id="checkbox2">
-          <label class="feedback-list__itemes-heading checkbox" for="checkbox2">Гора-Колокол</label>
+        <li class="list__items list__attraction">
+          <input type="checkbox" checked="checked" name="checkbox" class="visually-hidden radio-input" id="checkbox2">
+          <label class="list__heading checkbox" for="checkbox2">Гора-Колокол</label>
         </li>
-        <li class="feedback-list__items feedback-list__itemes--attraction">
-          <input type="checkbox" checked="true" name="checkbox" class="visually-hidden radio-input" id="checkbox3">
-          <label class="feedback-list__itemes-heading checkbox" for="checkbox3">Слайд-парк</label>
+        <li class="list__items list__attraction">
+          <input type="checkbox" checked="checked" name="checkbox" class="visually-hidden radio-input" id="checkbox3">
+          <label class="list__heading checkbox" for="checkbox3">Слайд-парк</label>
         </li>
-        <li class="feedback-list__items feedback-list__itemes--attraction">
+        <li class="list__items list__attraction">
           <input type="checkbox"  name="checkbox" class="visually-hidden radio-input" id="checkbox4">
-          <label class="feedback-list__itemes-heading checkbox" for="checkbox4">Красные скалы</label>
+          <label class="list__heading checkbox" for="checkbox4">Красные скалы</label>
         </li>
       </ul>
     </div>
-    <div class="feedback-block feedback-block--emotion">
-      <h2 class="feedback-block__title">
+    <div class="feedback__block feedback__block--emotion">
+      <h2 class="feedback__title">
         Опишите свои эмоции
       </h2>
       <textarea placeholder="Опишите подробно все свои восторги" class="feedback__filds"></textarea>
-      <div class="feedback-block--sending feedback-sending--indent">
-        <a href="hotels.html" class="button feedback-block__button">Найти гостиницу</a>
-        <h2 class="feedback-block__required-text">
+      <div class="feedback__sending feedback__sending--indent">
+        <a href="hotels.html" class="button feedback__button">Найти гостиницу</a>
+        <h2 class="feedback__required-text">
           * — обязательные поля
         </h2>
       </div>
@@ -149,21 +172,44 @@
       </div>
     </div>
   </div>
+  </main>
+    <footer class="footer">
+      <span class="footer__tag footer__tag--padding">#VISITSEDONA</span>
+      <ul class="footer footer-list">
+        <li>
+          <a href="https://vk.com/htmlacademy" class="footer__button footer__button-VK">
+            <svg width="24" height="14">
+              <use href="./img/sprite.svg#icon-vk"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li>
+          <a class="footer__button footer__button-Tl" href="https://t.me/htmlacademy">
+            <svg width="22" height="18">
+              <use href="./img/sprite.svg#icon-tg"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Телеграм</span>
+          </a>
+        </li>
+        <li>
+          <a href="tg://resolve?domain=htmlacademy" class="footer__button footer__button-yt">
+            <svg width="20" height="14">
+              <use href="./img/sprite.svg#icon-ytb"></use>
+            </svg>
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__developer footer__developer--padding">
+        <span class="footer__text">Разработано</span>
+        <a href="https://htmlacademy.ru/">
+          <svg width="27" height="35">
+            <use href="./img/sprite.svg#htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
 </div>
-</main>
-<footer class="page-footer">
-  <span class="page-footer__tag page-footer__tag--padding">#VISITSEDONA</span>
-  <ul class="page-footer page-footer_list">
-    <li><a href="" class="footer-button footer-button-VK"></a></li>
-    <li><a href="" class="footer-button footer-button-Tl"></a></li>
-    <li><a href="" class="footer-button footer-button-yt"></a></li>
-  </ul>
-  <div class="page-footer__developer page-footer__developer--padding">
-    <span class="page-footer__text">Разработано</span>
-    <a href="https://htmlacademy.ru/">
-      <img class="page-footer__academylogo" src="https://github.com/evsenia/1676195-sedona-25/blob/module2-task1/source/img/htmlacademy.svg.png?raw=true" alt="лого HTML academy">
-    </a>
-  </div>
-</footer>
 </body>
 </html>
